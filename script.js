@@ -36,8 +36,11 @@ inverse.addEventListener("click", function() {
 dot.addEventListener("click",function (){
     if(!display.textContent.includes(period) && !sign){
         display.textContent += '.'
-    }else if(sign){
+    }else if(sign && !secondNumber){
         display.textContent = ""
+        display.textContent += '.'
+        secondNumber = display.textContent
+    }else{
         display.textContent += '.'
         secondNumber = display.textContent
     }
